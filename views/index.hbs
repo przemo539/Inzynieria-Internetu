@@ -1,0 +1,19 @@
+sprawdz dostepnosc aut:
+<input id="od" value="2016-03-02">
+<input id="do" value="2018-03-02">
+<input id="target" type="submit" />
+<script type="text/javascript">
+$( "#target" ).click(function() {
+    var odDaty = $( "#od" ).val();
+    var doDaty = $( "#do" ).val();
+    window.location.href='/check/'+odDaty+'/'+doDaty;
+});
+</script><br /><br/>
+<h2>Aktualnosci ze strony:</h2><br/>
+{{#each news}}
+    {{this.Tytul}}<br/>
+    {{this.Tresc}}<br>
+    <br />
+    <br /> 
+    <br />
+{{/each}}

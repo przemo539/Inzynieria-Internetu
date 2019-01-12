@@ -1,0 +1,75 @@
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <h1>Zarejestruj</h1>
+        {{#if hasErrors }}
+            <div class="alert alert-danger">
+                {{#each messages}}
+                    <p>{{ this }}</p>
+                {{/each}}
+            </div>
+        {{/if}}
+        <form method="post">
+            <div class="form-group">
+                <label for="email">E-Mail</label>
+                <input type="text" id="email" class="form-control" name="email">
+            </div>
+            <div class="form-group">
+                <label for="email2">Powtórz E-Mail</label>
+                <input type="text" id="email2" class="form-control" name="email2">
+            </div>
+            <div class="form-group">
+                <label for="password">Hasło</label>
+                <input type="password" id="password" class="form-control" name="password">
+            </div>
+             <div class="form-group">
+                <label for="password2">Powtórz hasło</label>
+                <input type="password" id="password" class="form-control" name="password2">
+            </div>
+            <div class="form-group">
+                <label for="PESEL">PESEL:</label>
+                <input type="text" id="PESEL" class="form-control" name="PESEL">
+            </div>
+            <div class="form-group">
+                <label for="PRAWOJAZDY">Numer Prawa Jazdy</label>
+                <input type="text" id="numerPrawaJazdy" class="form-control" name="numerPrawaJazdy">
+            </div>
+            <div class="form-group">
+                <label for="ORGANWYDAJACY">Organ wydajacy Prawo Jazdy</label>
+                <input type="text" id="organWydajacyPrawko" class="form-control" name="organWydajacyPrawko">
+            </div>
+            <div class="form-group">
+                <label for="DATAWYDANIA">Data wydania Prawo Jazdy</label>
+                 <div class='input-group date' id='datetimepicker'>
+                     <input type="text" id="dataWydaniaPrawko" class="form-control" name="dataWydaniaPrawka">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-time"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="DATAWYDANIA">Data waznosci Prawo Jazdy</label>                
+                <div class='input-group date' id='datetimepicker2'>
+                    <input type="text" id="dataWaznosciPrawka" class="form-control" name="dataWaznosciPrawka">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-time"></span>
+                    </span>
+                </div>
+                        
+
+            </div>
+            <input type="hidden" name="_csrf" value="{{csrfToken}}">
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+        <script type="text/javascript">
+                    $(function () {
+                $('#datetimepicker').datetimepicker({
+                    format: 'DD/MM/YYYY'
+                });
+                $('#datetimepicker2').datetimepicker({
+                    format: 'DD/MM/YYYY'
+                });
+            });
+        </script>
+        <br /><br />
+    </div>
+</div> 

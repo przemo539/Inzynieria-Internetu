@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <h1>Konto użytkownika</h1>
+    
+    <hr>
+    <h2> orders</h2>
+    {{#each orders}}
+        <div class="panel-body">
+            <ul class="list-group">                
+                <div class="panel panel-default">
+                    
+                    <li class="list-group-item">
+                        <a href="/car/{{this.carid}}" target="_blank">Zobacz samochod</a>   OD:{{this.odData}} DO:{{this.doData}} zaplacono ogolem:{{this.payed}}
+                    </li>
+                    
+                </div>                
+            </ul>
+        </div>
+    {{/each}}
+    </div>
+</div> 

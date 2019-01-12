@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
+        <h1>Checkout</h1>
+        <h4>Your Total: ${{total}}</h4>
+        <div id="charge-error" class="alert alert-danger {{#if noError}}hidden{{/if}}">
+            {{errMsg}}
+        </div>
+        <form action="/checkout" method="post" id="checkout-form">
+            od:<input type="text" name="doDaty" value = "{{doDaty}}"  >
+            do:<input type="text" name="odDaty" value = "{{odDaty}}"  ><br />
+            odbior w:<select name="odbior">
+                <option value="krakow">krakow</option>
+                <option value="katowice">katowice</option>
+                <option value="warszawa">warszawa</option>
+                <option value="gdansk">gdansk</option>
+                <option value="def">Inne...</option>
+            </select><br />
+            Inne: <input type="text" name="inneOdbior" >(dodatkowo platne 1000zl)<br />
+            zwrot w:<select name="zwrot">
+                <option value="krakow">krakow</option>
+                <option value="katowice">katowice</option>
+                <option value="warszawa">warszawa</option>
+                <option value="gdansk">gdansk</option>
+                <option value="def">Inne...</option>
+            </select><br />
+            Inne: <input type="text" name="inneZwrot" >(dodatkowo platne 1000zl)<br />
+            dodatkowe platnosci doliczone nie sa poza zamowieniem.
+            Place:
+            <select name="place">
+                <option value="payu">Z gory(payU)</option>
+                <option value="przy_Odbiorze"> Przy odbiorze</option>
+            </select><br />
+            Przy odbiorze platnosc tylko gotowka!
+            
+            <button type="submit" class="btn btn-success">zamów teraz</button>
+        </form>
+    </div>
+</div>

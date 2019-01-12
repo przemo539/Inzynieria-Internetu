@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <form action="/admin/car" method="post">
+             <div class="form-group">
+                <label for="email">Adres obrazka</label>
+                <input type="text" class="form-control" name="imagePath">
+            </div>
+            <div class="form-group">
+                <label for="email">Marka</label>
+                <input type="text" class="form-control" name="brand">
+            </div>
+            <div class="form-group">
+                <label for="password">model</label>
+                 <input type="text" class="form-control" name="model">
+            </div>
+            <div class="form-group">
+                <label for="password">Krotki opis</label>
+                 <textarea cols="30" rows="10" name="short_description"></textarea>
+            </div>
+           <div class="form-group">
+                <label for="password">Dlugi opis</label>
+                 <textarea cols="30" rows="10" name="long_description"></textarea>
+            </div>
+             <div class="form-group">
+                <label for="password">typ</label>
+                 <input type="text" class="form-control" name="typ">
+            </div>
+            <div class="form-group">
+                <label for="password">Cena</label>
+                 <input type="text" class="form-control" name="price">
+            </div>
+            <input type="hidden" name="_csrf" value="{{csrfToken}}">
+            <button type="submit" class="btn btn-primary">opublikuj</button>
+        </form>
+    </div>  
+
+</div> 
+<a href="/admin/news">dodaj news</a><br />
+<a href="/admin/car">dodaj samochod</a><br />
+<a href="/admin/order">pokaz wypozyczenia</a><br />

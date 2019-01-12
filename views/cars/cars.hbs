@@ -1,0 +1,28 @@
+{{#each data_cars}}
+<div class="row">
+    {{#each this}}
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img src="{{this.imagePath}}" alt="problem z załadowaniem obrazka" class="img-responsive">
+            <div class="caption">
+                <h3>{{this.brand}} {{this.model}}</h3>
+                <p>{{this.short_description}} </p>
+                <h3>sprawdz dostepnosc:</h3>
+                <input id="{{this._id}}od" value="2016-03-02">
+                <input id="{{this._id}}do" value="2018-03-02">
+                <input id="{{this._id}}target" type="submit" />
+                <script type="text/javascript">
+                $( "#{{this._id}}target" ).click(function() {
+                    var odDaty = $( "#{{this._id}}od" ).val();
+                    var doDaty = $( "#{{this._id}}do" ).val();
+                    window.location.href='/check/{{this._id}}/'+odDaty+'/'+doDaty;
+                });
+                </script>
+                <div class="price center-block">{{this.price}}zł/dzien</div>
+                <div class="clearfix"><a href="/car/{{this._id}}" class="btn btn-primary pull-left" role="button">Czytaj więcej</a> <a href="/addCart/{{this._id}}" class="btn btn-default pull-right" role="button">Rezerwuj</a></div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+  </div>
+{{/each}}

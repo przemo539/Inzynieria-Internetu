@@ -1,0 +1,46 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+#caly_blok {
+  margin: 0 auto;
+  width: 1440px;
+  border: 1px solid black;
+  border-radius: 25px;
+}
+
+#naglowek {
+  background-image: url("../images/naglowek.png");
+  border-radius: 25px 25px 0 0;
+  height:167px;
+  width: 1440px;
+  text-align:center;
+}
+
+#srodek {  
+  width: 1440px;  
+  min-height: 600px;
+}
+
+
+#stopka {
+  background-image: url("../images/stopka.png");
+  border-radius: 0 0 25px 25px;
+  height: 101px;
+  width: 1440px;
+  text-align:center;
+}
+
+
+a {
+  color: #00B7FF;
+}
+.thumbnail img{
+  max-height: 130px;
+}
+
+.thumbnail .price{
+  font-weight: bold;
+  font-size:15px;
+}

@@ -1,0 +1,52 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">Strona główna</a>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="/cars/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-car" aria-hidden="true"></i><i class="fa fa-car" aria-hidden="true"></i>  Nasza oferta <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="/cars"> Wszystkie typy                        
+                        </a>
+                        <li>
+                            <a href="/cars/osobowy"> Samochody Osobowe                             
+                        </a>
+                        </li>
+                        <li>
+                            <a href="/cars/bus"> Bus                             
+                        </a>
+                        </li>
+                    </ul>   
+                </li>           
+             </ul>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/cart">
+                        <i class="fa fa-car" aria-hidden="true"></i> Zamówienia 
+                        <span class="badge">{{session.cart.totalyQty}}</span>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i> Konto użytkownika <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        {{#if login}}
+                            <li><a href="/user/profile">Profil użytkownika</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="/user/logout">Wyloguj się</a></li>
+                        {{else}}
+                            <li><a href="/user/signup">Zarejestruj</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="/user/signin">Zaloguj</a></li>
+                        {{/if}}
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>

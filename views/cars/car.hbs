@@ -1,0 +1,18 @@
+  <img src="{{data_car.imagePath}}" /><br/>
+  MARKA: {{data_car.brand}}<br/>
+  model: {{data_car.model}}<br/>
+  krotki opis: {{data_car.short_description}}<br/>
+  dlugi opis: {{data_car.long_description}}<br/>
+  cena: {{data_car.price}}/dzien<br/>
+
+                  <h3>sprawdz dostepnosc:</h3>
+                <input id="od" value="2016-03-02">
+                <input id="do" value="2018-03-02">
+                <input id="target" type="submit" />
+                <script type="text/javascript">
+                $( "#target" ).click(function() {
+                    var odDaty = $( "#od" ).val();
+                    var doDaty = $( "#do" ).val();
+                    window.location.href='/check/{{data_car._id}}/'+odDaty+'/'+doDaty;
+                });
+                </script>
